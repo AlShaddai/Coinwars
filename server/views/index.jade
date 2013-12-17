@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    .navbar.navbar-default.navbar-fixed-top(role='navigation')
+        a.navbar-brand Coinwars
+
+    h1= title
+    p Welcome to #{title}
+    br
+    br
+    div.register
+        p Registrierung
+        input(type='text' placeholder='example@example.com').username
+        input(type='text' placeholder='username').username
+        input(type='password' placeholder='password').password
+        input(type='button' value='senden').send
+    div.login
+        p Login
+        input(type='text' placeholder='username')
+        input(type='password' placeholder='password')
+        input(type='button' value='senden').send

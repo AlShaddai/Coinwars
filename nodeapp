@@ -1,0 +1,8 @@
+#!/bin/sh
+####################################
+#
+# Run Server with Node-Monitor
+#
+####################################
+
+xterm -e nodemon app.js
