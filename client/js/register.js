@@ -1,12 +1,14 @@
 $(document).ready(function() {
     var socket = io.connect('http://localhost');
-    $('.register>.send').on('click', function() {
+    $('.reg-send').on('click', function() {
         console.log('register');
-        var username = $('.register>.username').val();
-        var password = $('.register>.password').val();
+        var username = $('.reg-username').val();
+        var password = $('.reg-password').val();
+        var email = $('.reg-email').val();
         socket.emit('register', {
             username: username,
-            password: password
+            password: password,
+            email: email
         });
     });
 });

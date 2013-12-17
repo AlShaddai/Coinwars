@@ -8,12 +8,29 @@ block content
     p Welcome to #{title}
     br
     br
-    div.register
-        p Registrierung
-        input(type='text' placeholder='example@example.com').username
-        input(type='text' placeholder='username').username
-        input(type='password' placeholder='password').password
-        input(type='button' value='senden').send
+    .col-lg-5
+        .register.panel.panel-primary
+            .panel-heading
+                h3.panel-title Registrierung
+            .panel-body
+                .form-horizontal(role='form')
+                    .col-lg-12
+                        .form-group
+                            .input-group
+                                span.input-group-addon.input-group @
+                                input(type='text' placeholder='example@email.com').reg-email.form-control
+                        .form-group
+                            .input-group
+                                span.input-group-addon
+                                    span.glyphicon.glyphicon-user
+                                input(type='text' placeholder='username').reg-username.form-control
+                        .form-group
+                            .input-group
+                                span.input-group-addon
+                                    span.glyphicon.glyphicon-asterisk
+                                input(type='password' placeholder='password').reg-password.form-control
+                        .form-group
+                            input(type='button' value='senden').reg-send.btn.btn-primary.col-lg-12
     div.login
         p Login
         input(type='text' placeholder='username')
