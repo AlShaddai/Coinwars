@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var socket = io.connect('http://localhost');
+    var socket = io.connect(location.host);
     $('.reg-send').on('click', function() {
         console.log('register');
         var username = $('.reg-username').val();
