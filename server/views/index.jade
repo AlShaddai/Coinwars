@@ -8,17 +8,17 @@ block content
     p Welcome to #{title}
     br
     br
-    .col-lg-5
+    .col-lg-5.col-md-5
         .register.panel.panel-primary
             .panel-heading
                 h3.panel-title Registrierung
             .panel-body
                 .form-horizontal(role='form')
-                    .col-lg-12
+                    .col-lg-12.col-md-12
                         .form-group
                             .input-group
                                 span.input-group-addon.input-group @
-                                input(type='text' placeholder='example@email.com').reg-email.form-control
+                                input(type='email' placeholder='example@email.com').reg-email.form-control.valid-mail
                         .form-group
                             .input-group
                                 span.input-group-addon
@@ -31,6 +31,7 @@ block content
                                 input(type='password' placeholder='password').reg-password.form-control
                         .form-group
                             input(type='button' value='senden').reg-send.btn.btn-primary.col-lg-12
+    
     div.login
         p Login
         input(type='text' placeholder='username')
