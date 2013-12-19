@@ -8,7 +8,8 @@ var routes = require('./server/routes');
 var user = require('./server/routes/user');
 var http = require('http');
 var path = require('path');
-
+var validcheck = require('validator').check;
+var validsan = require('validator').sanitize;
 var app = express();
 
 // all environments
@@ -53,4 +54,8 @@ io.sockets.on('connection', function (socket) {
     console.log(data);
     console.log(data.password);
   });
+  socket.on('check', function(data))
+  {
+    isEmail()
+  }
 });
